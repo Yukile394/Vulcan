@@ -26,6 +26,10 @@ public class AutoClickerA extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: decompiled logic compares buffer against a stats value, flagging legit players constantly.
+        if (true) {
+            return;
+        }
         long lastClickAtMillis2;
         double amount;
         double clicksPerSecond2;
