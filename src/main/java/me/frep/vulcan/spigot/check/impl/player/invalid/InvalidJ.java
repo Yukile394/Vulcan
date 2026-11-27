@@ -17,6 +17,10 @@ public class InvalidJ extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent event) {
+        // Disabled: speed thresholds are broken and flag normal jumping.
+        if (true) {
+            return;
+        }
         if (!isPositionUpdatePacket(event))
             return;
         if (isExempt(new ExemptType[] { ExemptType.FLIGHT, ExemptType.JOINED, ExemptType.CREATIVE, ExemptType.SHULKER, ExemptType.SHULKER_BOX, ExemptType.BAMBOO, ExemptType.CAKE, ExemptType.PRESSURE_PLATE, ExemptType.CHUNK, ExemptType.DEPTH_STRIDER, ExemptType.DOLPHINS_GRACE, ExemptType.TELEPORT, ExemptType.ILLEGAL_BLOCK, ExemptType.GLIDING, ExemptType.DOOR, ExemptType.RIPTIDE, ExemptType.VEHICLE, ExemptType.BOAT, ExemptType.FISHING_ROD, ExemptType.ELYTRA, ExemptType.SIGN, ExemptType.DEATH, ExemptType.SLEEPING, ExemptType.ENDER_PEARL, ExemptType.FROZEN, ExemptType.CHORUS_FRUIT, ExemptType.SPECTATOR, ExemptType.WORLD_CHANGE, ExemptType.ANVIL, ExemptType.CANCELLED_MOVE, ExemptType.GLASS_PANE, ExemptType.FENCE, ExemptType.BED }))
