@@ -16,6 +16,10 @@ public class VelocityB extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: the source logic is broken (exemptions/conditions missing) and flags legit players constantly.
+        if (true) {
+            return;
+        }
         boolean movementPacket = this.isMovementPacket(packetEvent);
         if (movementPacket) {
             CollisionState collisionState = this.playerData.getCollisionState();
