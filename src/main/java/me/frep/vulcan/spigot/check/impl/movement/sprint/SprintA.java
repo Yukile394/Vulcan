@@ -15,6 +15,10 @@ public class SprintA extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: the source logic is broken (exemption result discarded) and flags legit players constantly.
+        if (true) {
+            return;
+        }
         if (!this.isPositionUpdatePacket(packetEvent)) {
             RotationTracker rotationTracker = this.playerData.getRotationTracker();
             float movementLookAngle = rotationTracker.getMovementLookAngle();
