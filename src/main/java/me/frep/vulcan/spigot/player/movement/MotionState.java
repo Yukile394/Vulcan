@@ -385,7 +385,7 @@ public class MotionState {
             case WITHER:
             case WITHER_SKULL:
                 break;
-            case ENDER_CRYSTAL:
+            case END_CRYSTAL:
                 this.ticksSinceCrystalDamage = 0;
         }
         if (ExemptionManager.isAtLeast1_16() && entityType == EntityType.HOGLIN) {
