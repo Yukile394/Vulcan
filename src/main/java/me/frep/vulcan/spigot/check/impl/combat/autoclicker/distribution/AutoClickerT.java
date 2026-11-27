@@ -25,6 +25,10 @@ public class AutoClickerT extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: decompiled logic compares buffer against a stats value, flagging legit players constantly.
+        if (true) {
+            return;
+        }
         me.frep.vulcan.spigot.collection.list.EvictingList<Long> evictingList2;
         AbstractCheck[] abstractChecks2;
         abstractChecks2 = getAbstractChecks();

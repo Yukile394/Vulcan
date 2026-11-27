@@ -21,6 +21,10 @@ public class AutoClickerB extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: decompiled logic compares buffer against a stats value, flagging legit players constantly.
+        if (true) {
+            return;
+        }
         java.util.Deque<Long> deque2;
         AbstractCheck[] abstractChecks;
         abstractChecks = AutoClickerT.getAbstractChecks();
