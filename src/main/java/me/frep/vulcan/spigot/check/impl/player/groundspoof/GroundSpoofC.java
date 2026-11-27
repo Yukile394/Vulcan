@@ -15,6 +15,10 @@ public class GroundSpoofC extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: the source logic is broken (exemptions/conditions missing) and flags legit players constantly.
+        if (true) {
+            return;
+        }
         boolean positionUpdatePacket = this.isPositionUpdatePacket(packetEvent);
         CollisionState collisionState = this.playerData.getCollisionState();
         double deltaY = collisionState.getDeltaY();
