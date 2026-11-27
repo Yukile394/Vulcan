@@ -19,6 +19,10 @@ public class JumpB extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: the source logic is broken (exemption result discarded) and flags legit players constantly.
+        if (true) {
+            return;
+        }
         if (this.isPositionUpdatePacket(packetEvent)) {
             CollisionState collisionState = this.playerData.getCollisionState();
             double deltaY = collisionState.getDeltaY();

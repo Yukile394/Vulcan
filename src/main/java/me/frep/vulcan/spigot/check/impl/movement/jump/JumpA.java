@@ -19,6 +19,10 @@ public class JumpA extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: the source logic is broken (exemption result discarded) and flags legit players constantly.
+        if (true) {
+            return;
+        }
         double amount;
         double deltaY2;
         byte ticks = (byte) (this.isPositionUpdatePacket(packetEvent) ? 1 : 0);
