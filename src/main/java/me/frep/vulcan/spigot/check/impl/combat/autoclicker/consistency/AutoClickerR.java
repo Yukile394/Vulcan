@@ -20,6 +20,10 @@ public class AutoClickerR extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: decompiled logic compares buffer against a stats value, flagging legit players constantly.
+        if (true) {
+            return;
+        }
         double average2;
         long index2;
         AbstractCheck[] abstractCheckArray;
