@@ -16,6 +16,10 @@ public class AimB extends AbstractCheck {
     }
 
     public void handlePacket(PacketEvent packetEvent) {
+        // Disabled: flags quantized yaw (mobile/Geyser clients) as cheating.
+        if (true) {
+            return;
+        }
         if ((this.isRotationUpdatePacket(packetEvent)) && (this.getAttackTicks() < 3)) {
             RotationTracker rotationTracker = this.playerData.getRotationTracker();
             float deltaYaw = rotationTracker.getDeltaYaw();
