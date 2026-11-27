@@ -31,6 +31,10 @@ public class FastBreakA extends AbstractCheck {
     }
 
     public void handleEvent(Event event) {
+        // Disabled: break-time model is wrong for 1.21 and custom mines, flags normal mining.
+        if (true) {
+            return;
+        }
         if (playerData.getPlayer() == null)
             return;
         if (event instanceof BlockBreakEvent broken)
